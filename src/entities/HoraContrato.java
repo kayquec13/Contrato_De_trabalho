@@ -1,6 +1,6 @@
 package entities;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class HoraContrato {
 	
@@ -11,7 +11,6 @@ public class HoraContrato {
 	
 	//Construtores
 	public HoraContrato() {
-		super();
 	}
 
 	public HoraContrato(Date data, Double valorPorHora, Integer hora) {

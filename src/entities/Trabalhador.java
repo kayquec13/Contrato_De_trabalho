@@ -77,12 +77,12 @@ public class Trabalhador {
 	}
 	
 	//Métodp que calcula a renda do trabalhador somando o salario fixo com os contratos do mês
-	//Utilizamos Calendar para 
+	//Utilizamos Calendar para pegar a data da classe HoraContrato e comparar dentro do if
+	//a data informada pelo usuario.
 	public double renda(int ano, int mes) {
 		double soma = this.salarioBase;
 		
 		Calendar cal = Calendar.getInstance();
-		
 		for (HoraContrato c : contrato) {
 			cal.setTime(c.getData());
 			int c_ano = cal.get(Calendar.YEAR);
@@ -91,8 +91,6 @@ public class Trabalhador {
 				soma += c.valorTotal();
 			}
 		}
-		
 		return soma;
 	}
-	
 }
